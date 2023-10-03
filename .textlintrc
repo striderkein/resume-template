@@ -1,4 +1,11 @@
 {
+  "filters": {
+    "allowlist": {
+      "allow": [
+        "%", // allow half-width percent sign
+      ]
+    }
+  },
   "rules": {
     "preset-ja-technical-writing": {
       "sentence-length": {
