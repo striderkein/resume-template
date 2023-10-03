@@ -1,8 +1,16 @@
 # { name } resume
 
-## Sample
+## Data
 
-https://github.com/kawamataryo/resume
+- GitHub Pages
+  - [ja](https://YOUR_ACCOUNT.github.io/resume)
+  - [en](https://YOUR_ACCOUNT.github.io/resume/en)
+- PDF
+  - [ja](https://github.com/YOUR_ACCOUNT/resume/releases/latest/download/resume.pdf)
+  - [en](https://github.com/YOUR_ACCOUNT/resume/releases/latest/download/resume-en.pdf)
+- File
+  - [ja](https://github.com/YOUR_ACCOUNT/resume/blob/master/docs/README.md)
+  - [en](https://github.com/YOUR_ACCOUNT/resume/blob/master/docs/en/README.md)
 
 ## Features
 
@@ -10,34 +18,28 @@ https://github.com/kawamataryo/resume
 
 Automatic proofreading with [textlint](https://github.com/textlint/textlint).
 
+```node
+npm run lint --fix
 ```
-$ yarn lint --fix
-```
+
 It is also automatically executed when pre-commit by [husky](https://github.com/typicode/husky).  
 proofreading rules are set with `.textlintrc`.
-
-
 
 ### 📝 Convert MD to PDF
 
 You can generate PDF with [md-to-pdf](https://www.npmjs.com/package/md-to-pdf).
 
-
-```
-$ yarn build:pdf
+```node
+npm run build:pdf
 ```
 
 The output PDF can be styled as you like with CSS. Edit the `pdf-configs/style.css`.  
 
-### 🛠 Create release
+### :label: Versioning Semantically by label
 
-When you push with a `v**` tag, GitHub Actions will run the build, generate the PDF, create a Release, and register the PDF to Assets.
-
-```
-$ git commit -m "add job"
-$ git tag v1.0
-$ git push origin --tags
-```
+versioning semantically by applying labels that `major`, `minor`, `patch`.
+If no label is applied, the default version will be incremented as `patch`.
+If you want to explicitly increase a version other than `patch`, Attach either `major` or `minor` label to PR
 
 ### 📆 Remind update
 
